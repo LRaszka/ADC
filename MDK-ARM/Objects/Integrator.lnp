@@ -1,0 +1,12 @@
+--cpu=Cortex-M4.fp
+".\objects\stm32f30x_rcc.o"
+".\objects\stm32f30x_gpio.o"
+".\objects\stm32f30x_adc.o"
+".\objects\main.o"
+".\objects\stm32f30x_it.o"
+".\objects\system_stm32f30x.o"
+".\objects\startup_stm32f30x.o"
+--strict --scatter ".\Objects\Integrator.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\Integrator.map" -o .\Objects\Integrator.axf
